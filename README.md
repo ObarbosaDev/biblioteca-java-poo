@@ -1,108 +1,162 @@
 # biblioteca-java-poo
 
-Projeto final da materia de Programacao Orientada a Objetos.
+Projeto final da disciplina de Programacao Orientada a Objetos.
 
-## Visao geral
+## 1. Visao geral do projeto
 
-Este projeto tem como objetivo desenvolver um sistema simples em Java usando Programacao Orientada a Objetos e interface CLI.
+Este repositorio contem o desenvolvimento de um sistema simples em Java com interface baseada em linha de comando.
 
 O tema escolhido pelo grupo foi:
 
 **Sistema de Gestao de Acervo e Emprestimos de Biblioteca**
 
-O sistema sera executado no terminal e deve permitir ao usuario navegar por menus numericos para gerenciar os principais modulos da biblioteca.
+A proposta do projeto e representar, de forma academica e funcional, uma rotina basica de biblioteca, permitindo o gerenciamento de livros, leitores e emprestimos por meio de menus exibidos no terminal.
 
-## Objetivo do trabalho
+O sistema foi pensado para ser:
 
-O trabalho foi pensado para praticar:
+- simples de entender
+- organizado em responsabilidades
+- compativel com o conteudo estudado em aula
+- facil de evoluir em grupo
 
-- organizacao de codigo em Java
-- uso de classes e objetos
-- separacao de responsabilidades
-- estrutura de menu em terminal
-- operacoes de CRUD
-- aplicacao dos conceitos de POO
+## 2. Contexto do trabalho
 
-Na pratica, o sistema deve permitir o gerenciamento de:
+O trabalho pratico foi proposto com o objetivo de aplicar, em um projeto real de pequena escala, os conceitos fundamentais da disciplina.
 
-- livros
-- leitores
-- emprestimos
+Entre os principais pontos esperados no desenvolvimento estao:
 
-Cada modulo deve ter operacoes de cadastro, listagem, busca, atualizacao e exclusao, quando aplicavel.
+- uso da linguagem Java
+- aplicacao de Programacao Orientada a Objetos
+- criacao de modulos com CRUD
+- organizacao do codigo em classes
+- interacao do usuario por interface CLI
 
-## Objetivo tecnico do projeto
+Mais do que apenas exibir menus, o sistema precisa demonstrar estrutura, separacao de responsabilidades e coerencia entre os modulos que compoem o projeto.
 
-No lado tecnico, o projeto foi dividido para ficar simples, funcional e compativel com o conteudo visto em aula.
+## 3. Objetivo academico
 
-A ideia nao e criar um sistema empresarial complexo.
+Do ponto de vista da disciplina, este projeto tem como objetivo consolidar a pratica de:
 
-A ideia e criar um sistema academico organizado, com:
+- classes e objetos
+- atributos e metodos
+- encapsulamento
+- abstracao
+- heranca, quando aplicavel
+- polimorfismo, quando aplicavel
+- modularizacao do codigo
+- navegacao por menus
+- leitura de dados com `Scanner`
 
-- Java puro
-- entrada de dados com `Scanner`
-- menus com `switch-case`
-- classes separadas por responsabilidade
-- interacao pelo terminal
-- dados em memoria
+Assim, o sistema funciona nao apenas como um programa executavel, mas tambem como um exercicio de modelagem e organizacao de software em Java.
 
-## Tema escolhido
+## 4. Objetivo do sistema
 
-O grupo escolheu o tema biblioteca porque ele permite trabalhar bem com 3 modulos principais:
+O sistema tem como finalidade controlar tres areas principais de uma biblioteca:
 
-- `Livro`
-- `Leitor`
-- `Emprestimo`
+- cadastro e consulta de livros
+- cadastro e consulta de leitores
+- controle de emprestimos e devolucoes
 
-Esses modulos se relacionam de forma natural:
+Na versao final, o sistema deve permitir:
 
-- um livro pode estar disponivel ou emprestado
-- um leitor pode pegar livros emprestados
-- um emprestimo relaciona um livro com um leitor
+- cadastrar registros
+- listar registros
+- buscar registros
+- atualizar registros
+- excluir registros
 
-## Estrutura do projeto
+No caso do modulo de emprestimos, tambem se espera:
+
+- registrar um emprestimo
+- renovar um emprestimo
+- registrar devolucao
+- listar emprestimos ativos
+
+## 5. Tema escolhido
+
+O tema biblioteca foi escolhido porque oferece uma estrutura clara de relacionamento entre entidades e permite aplicar os requisitos da disciplina de forma natural.
+
+Dentro desse contexto:
+
+- um `Livro` representa um item do acervo
+- um `Leitor` representa a pessoa que utiliza o sistema
+- um `Emprestimo` representa a relacao entre livro e leitor em uma operacao de retirada
+
+Isso permite ao grupo trabalhar com modulos bem definidos e, ao mesmo tempo, conectados entre si.
+
+## 6. Estrutura atual do repositorio
+
+Atualmente, o repositorio foi mantido em uma estrutura inicial simples, para facilitar o entendimento, a apresentacao parcial do trabalho e a integracao entre os integrantes.
 
 ```text
 biblioteca-java-poo/
 |-- docs/
+|   `-- README.md
 |-- src/
 |   `-- Main.java
+|-- .gitignore
 `-- README.md
 ```
 
-## Explicacao da estrutura
+## 7. Explicacao da estrutura
 
 ### `src/Main.java`
 
-E o ponto de entrada do sistema.
+E o arquivo principal do sistema.
 
-Essa classe deve:
+Nele estao concentradas, no momento, as responsabilidades de:
 
 - iniciar o programa
-- mostrar o menu principal
-- mostrar os submenus
-- ler as opcoes digitadas
-- tratar opcoes invalidas
-- chamar os metodos dos controllers
+- criar o menu principal
+- criar os submenus
+- controlar a navegacao no terminal
+- ler as opcoes informadas pelo usuario
+- chamar os metodos responsaveis por cada modulo
 
-O `Main` nao deve concentrar a regra completa de livros, leitores e emprestimos.
+Tambem existem, neste momento, classes temporarias de controller dentro do mesmo arquivo.
 
-Ele deve funcionar como organizador da navegacao.
+Essas classes temporarias existem somente para:
+
+- permitir a compilacao do projeto
+- demonstrar o fluxo de navegacao
+- testar a estrutura do menu
+- manter o repositorio simples nesta fase inicial
 
 ### `docs/`
 
-Pasta reservada para materiais do trabalho.
+Esta pasta foi reservada para os materiais de apoio do trabalho.
 
-Pode guardar:
+Ela pode armazenar:
 
 - roteiro da apresentacao
 - observacoes do grupo
-- topicos para a fala
-- versao final do PowerPoint
+- estrutura da fala
+- arquivo final do PowerPoint
 
-## Divisao do grupo
+### `README.md`
 
-O trabalho foi dividido entre 5 integrantes para separar as responsabilidades e facilitar a integracao final.
+Este arquivo tem duas funcoes principais:
+
+- documentar o projeto para leitura geral
+- orientar tecnicamente o grupo sobre a divisao e a continuidade do desenvolvimento
+
+## 8. Estado atual do projeto
+
+No estado atual, o projeto ja possui a parte inicial da estrutura principal montada.
+
+Isso significa que:
+
+- o menu principal ja foi criado
+- os submenus ja foram organizados
+- a navegacao por opcoes numericas ja foi implementada
+- a leitura de entradas ja foi tratada
+- as chamadas dos modulos ja foram definidas
+
+Por outro lado, os modulos finais de Livro, Leitor e Emprestimo ainda serao implementados nas proximas etapas do trabalho pelos integrantes responsaveis.
+
+## 9. Divisao do grupo
+
+Para facilitar a producao do sistema e evitar sobrecarga em uma unica pessoa, o trabalho foi dividido em 5 partes.
 
 ### Pessoa 1 - Estrutura principal e menu CLI
 
@@ -111,17 +165,13 @@ Responsabilidades:
 - criar a classe `Main`
 - montar o menu principal
 - montar os submenus
-- fazer a navegacao com opcoes numericas
-- controlar a execucao geral do sistema
-- integrar as chamadas para os controllers
+- controlar a navegacao por opcoes numericas
+- organizar a execucao geral do sistema
+- integrar as chamadas para os modulos
 
-Arquivos ligados a essa parte:
+Resumo da funcao:
 
-- `src/Main.java`
-
-Resumo:
-
-A Pessoa 1 cuida da estrutura principal do sistema. Ela nao precisa implementar toda a logica interna dos modulos, mas precisa deixar a navegacao funcionando para o restante do grupo conectar suas partes.
+Essa parte e responsavel por garantir que o sistema tenha uma base funcional de interacao com o usuario, permitindo que os outros modulos sejam conectados depois.
 
 ### Pessoa 2 - Modulo Livro
 
@@ -130,16 +180,11 @@ Responsabilidades:
 - criar a classe `Livro`
 - definir atributos, construtor, getters e setters
 - implementar o CRUD de livros
-- controlar status do livro, como disponivel ou emprestado
+- controlar o status do livro, como disponivel ou emprestado
 
-Arquivos ligados a essa parte:
+Resumo da funcao:
 
-- `Livro.java`
-- `LivroController.java`
-
-Resumo:
-
-A Pessoa 2 cuida de tudo que estiver ligado ao modulo de livros.
+Essa parte cuida do acervo da biblioteca, ou seja, dos livros cadastrados no sistema.
 
 ### Pessoa 3 - Modulo Leitor
 
@@ -149,14 +194,9 @@ Responsabilidades:
 - definir atributos, construtor, getters e setters
 - implementar o CRUD de leitores
 
-Arquivos ligados a essa parte:
+Resumo da funcao:
 
-- `Leitor.java`
-- `LeitorController.java`
-
-Resumo:
-
-A Pessoa 3 cuida de tudo que estiver ligado ao modulo de leitores.
+Essa parte cuida dos usuarios da biblioteca que podem realizar emprestimos.
 
 ### Pessoa 4 - Modulo Emprestimo
 
@@ -168,63 +208,61 @@ Responsabilidades:
 - registrar devolucao
 - renovar prazo
 - listar emprestimos ativos
-- atualizar o status do livro ao emprestar e devolver
 
-Arquivos ligados a essa parte:
+Resumo da funcao:
 
-- `Emprestimo.java`
-- `EmprestimoController.java`
+Essa parte conecta os demais modulos e representa a operacao principal do sistema.
 
-Resumo:
-
-A Pessoa 4 cuida do modulo que liga os outros dois principais, por isso essa parte depende de alinhamento com Livro e Leitor.
-
-### Pessoa 5 - Organizacao, POO e apresentacao
+### Pessoa 5 - Revisao, padronizacao, POO e apresentacao
 
 Responsabilidades:
 
-- revisar o codigo inteiro
+- revisar o codigo completo
 - padronizar nomes de classes, metodos e variaveis
-- conferir o uso de POO
-- ajudar na organizacao final do projeto
+- verificar a coerencia entre os modulos
+- conferir a aplicacao dos conceitos de POO
 - montar a apresentacao
-- preparar a fala do grupo
+- organizar a demonstracao final
 
-Arquivos ligados a essa parte:
+Resumo da funcao:
 
-- revisao geral de `src/`
-- materiais em `docs/`
+Essa parte ajuda a dar unidade ao projeto e melhora a qualidade final antes da entrega.
 
-Resumo:
+## 10. Como o sistema foi pensado
 
-A Pessoa 5 faz a costura final do trabalho, ajudando a deixar tudo consistente antes da entrega.
+O funcionamento geral do sistema foi planejado de forma simples:
 
-## Como as partes se conectam
+1. o programa e iniciado pelo `Main`
+2. o menu principal e exibido
+3. o usuario escolhe o modulo desejado
+4. o sistema abre o submenu correspondente
+5. o `Main` chama o metodo do controller ligado a opcao escolhida
+6. o controller executa a operacao do modulo
 
-Para o projeto funcionar sem retrabalho, o grupo precisa seguir a mesma estrutura.
+Esse fluxo foi definido para deixar o sistema facil de compreender e tambem para evitar concentrar toda a logica em um unico bloco de codigo.
 
-Fluxo esperado:
+## 11. Fluxo de integracao entre as partes
 
-1. `Main.java` exibe os menus
-2. o usuario escolhe uma opcao
-3. o `Main` chama o controller correspondente
-4. o controller executa a operacao
-5. o controller usa as classes de modelo para trabalhar com os dados
-6. a resposta volta para o terminal
+Quando os colegas concluirem seus modulos, a integracao esperada sera:
 
-Exemplo:
+1. o `Main.java` chamara os controllers reais
+2. os controllers executarao as operacoes de cada modulo
+3. as classes de modelo representarao os dados do sistema
+4. o resultado das operacoes sera mostrado no terminal
+
+Exemplo esperado:
 
 1. usuario escolhe `1 - Gerenciar Livros`
-2. entra no submenu de livros
-3. escolhe `1 - Cadastrar livro`
-4. o `Main` chama `livroController.cadastrarLivro();`
-5. o controller executa o cadastro
+2. usuario escolhe `1 - Cadastrar livro`
+3. o `Main` chama `livroController.cadastrarLivro();`
+4. o controller executa o cadastro
+5. a resposta e exibida para o usuario
 
-## Padrao de nomes ja definido no Main
+## 12. Padrao de metodos ja definido no Main
 
-Para evitar erro de integracao, os nomes dos metodos dos controllers ja estao definidos.
+Para que o grupo trabalhe com compatibilidade, o `Main.java` ja define os nomes dos metodos que deverao existir nos controllers.
 
-### `LivroController`
+### Metodos esperados em `LivroController`
 
 - `cadastrarLivro()`
 - `listarLivros()`
@@ -232,7 +270,7 @@ Para evitar erro de integracao, os nomes dos metodos dos controllers ja estao de
 - `atualizarLivro()`
 - `excluirLivro()`
 
-### `LeitorController`
+### Metodos esperados em `LeitorController`
 
 - `cadastrarLeitor()`
 - `listarLeitores()`
@@ -240,7 +278,7 @@ Para evitar erro de integracao, os nomes dos metodos dos controllers ja estao de
 - `atualizarLeitor()`
 - `excluirLeitor()`
 
-### `EmprestimoController`
+### Metodos esperados em `EmprestimoController`
 
 - `registrarEmprestimo()`
 - `listarEmprestimos()`
@@ -248,84 +286,26 @@ Para evitar erro de integracao, os nomes dos metodos dos controllers ja estao de
 - `registrarDevolucao()`
 - `listarEmprestimosAtivos()`
 
-Esses nomes devem ser mantidos.
+Esses nomes devem ser mantidos para evitar erro de integracao entre o menu e os modulos.
 
-Se algum integrante mudar esses nomes sem alinhar com o grupo, o `Main.java` deixa de funcionar corretamente.
+## 13. Arquivos previstos para as proximas etapas
 
-## Onde cada integrante deve codar
-
-### Pessoa 1
-
-Editar:
-
-- `src/Main.java`
-
-### Pessoa 2
-
-Criar depois:
+Nas proximas fases do projeto, ainda deverao ser criados:
 
 - `Livro.java`
-- `LivroController.java`
-
-### Pessoa 3
-
-Criar depois:
-
 - `Leitor.java`
-- `LeitorController.java`
-
-### Pessoa 4
-
-Criar depois:
-
 - `Emprestimo.java`
+- `LivroController.java`
+- `LeitorController.java`
 - `EmprestimoController.java`
 
-### Pessoa 5
+Esses arquivos completarao a estrutura final esperada do sistema.
 
-Revisar:
-
-- organizacao dos arquivos
-- padrao dos nomes
-- coerencia dos comentarios
-- aplicacao de POO
-- conteudo da apresentacao
-
-## O que combinar antes de cada um codar
-
-Antes de cada integrante avancar muito na propria parte, o grupo precisa alinhar:
-
-- nomes dos atributos
-- nomes dos metodos
-- tipo dos dados
-- formato das mensagens no terminal
-- como o livro vai indicar se esta disponivel
-- como o emprestimo vai se relacionar com livro e leitor
-
-Esse alinhamento evita que cada pessoa faca uma parte incompatível com a outra.
-
-## Orientacao tecnica por modulo
-
-### Main
-
-O `Main` deve ser simples e organizado.
-
-Ele deve conter:
-
-- `main()`
-- `iniciarSistema()`
-- `exibirMenuPrincipal()`
-- `menuLivros()`
-- `menuLeitores()`
-- `menuEmprestimos()`
-- `exibirSobreSistema()`
-- `lerOpcao()`
-- `pausar()`
-- `exibirCabecalho(String titulo)`
+## 14. O que cada modulo deve representar
 
 ### Livro
 
-O modulo de livro pode conter informacoes como:
+Pode conter informacoes como:
 
 - codigo
 - titulo
@@ -335,123 +315,72 @@ O modulo de livro pode conter informacoes como:
 
 ### Leitor
 
-O modulo de leitor pode conter informacoes como:
+Pode conter informacoes como:
 
 - codigo
 - nome
-- cpf ou matricula
+- matricula ou cpf
 - telefone
 
 ### Emprestimo
 
-O modulo de emprestimo pode conter informacoes como:
+Pode conter informacoes como:
 
 - codigo do emprestimo
 - livro relacionado
 - leitor relacionado
 - data do emprestimo
-- data da devolucao
-- status
+- data prevista de devolucao
+- status do emprestimo
 
-## Situacao atual do projeto
+## 15. Decisao de simplicidade da estrutura atual
 
-Atualmente, o projeto foi deixado de forma mais simples para facilitar o entendimento do grupo.
+Mesmo sendo possivel criar uma estrutura com varios arquivos e pastas desde o inicio, nesta fase o repositorio foi mantido com uma organizacao mais simples.
 
-No momento:
+Essa decisao foi tomada para:
 
-- existe apenas o `src/Main.java`
-- os controllers no fim do arquivo sao temporarios
-- eles servem apenas para testar o menu
-- os outros arquivos serao criados depois pelo grupo
+- evitar confusao para integrantes iniciantes
+- facilitar a leitura do professor
+- permitir uma primeira versao funcional do menu
+- reduzir erros de organizacao antes da etapa de integracao final
 
-Quando o grupo avancar:
+Assim, a estrutura atual privilegia clareza e compreensao, sem impedir a evolucao posterior do projeto.
 
-- a Pessoa 2 cria `Livro.java` e `LivroController.java`
-- a Pessoa 3 cria `Leitor.java` e `LeitorController.java`
-- a Pessoa 4 cria `Emprestimo.java` e `EmprestimoController.java`
+## 16. Tecnologias e abordagem utilizada
 
-Depois, esses controllers temporarios do `Main.java` podem ser removidos.
+O projeto foi planejado com base em uma abordagem propositalmente simples, sem o uso de frameworks ou banco de dados.
 
-## O que cada pessoa pode editar agora
+Foram adotados:
 
-### Pessoa 1
+- Java puro
+- `Scanner` para entrada de dados
+- `switch-case` para navegacao dos menus
+- metodos separados para cada responsabilidade
+- interface em terminal
 
-Pode continuar editando:
+Essa escolha foi feita para manter o trabalho alinhado com o escopo academico da disciplina.
 
-- `src/Main.java`
+## 17. Como executar
 
-### Pessoa 2
-
-Vai criar depois:
-
-- `Livro.java`
-- `LivroController.java`
-
-### Pessoa 3
-
-Vai criar depois:
-
-- `Leitor.java`
-- `LeitorController.java`
-
-### Pessoa 4
-
-Vai criar depois:
-
-- `Emprestimo.java`
-- `EmprestimoController.java`
-
-### Pessoa 5
-
-Pode revisar:
-
-- todos os arquivos de `src/`
-- materiais de `docs/`
-
-## Regras para nao quebrar a integracao
-
-Para o grupo conseguir subir as partes sem conflito, estas regras devem ser mantidas:
-
-- nao mudar o nome das classes
-- nao mudar o nome dos metodos chamados no `Main`
-- combinar antes onde os novos arquivos vao ficar
-- nao criar outra classe com o mesmo nome sem alinhar com o grupo
-
-Se essas regras forem seguidas, cada pessoa consegue trabalhar na sua propria parte e depois integrar sem retrabalho.
-
-## Como executar
-
-Dentro da pasta do projeto, use:
+Para compilar e executar a versao atual do sistema, utilize:
 
 ```bash
 javac src/Main.java
 java -cp src Main
 ```
 
-## Fluxo sugerido de desenvolvimento
+## 18. Entrega final esperada
 
-1. Pessoa 1 finaliza o menu e a estrutura principal.
-2. Pessoa 2 implementa `Livro` e `LivroController`.
-3. Pessoa 3 implementa `Leitor` e `LeitorController`.
-4. Pessoa 4 implementa `Emprestimo` e `EmprestimoController`.
-5. Pessoa 5 revisa o projeto inteiro.
-6. O grupo integra tudo e testa junto.
-7. O grupo monta a apresentacao final.
-
-## O que sera entregue
-
-Ao final, o grupo deve entregar:
+Ao final do desenvolvimento, o grupo devera entregar:
 
 - codigo-fonte completo do sistema
 - apresentacao em PowerPoint
 
-## Observacao final
+## 19. Consideracoes finais
 
-Este projeto foi organizado para manter um nivel compativel com faculdade:
+Este repositorio foi organizado para servir a dois objetivos ao mesmo tempo:
 
-- simples
-- funcional
-- bem dividido
-- facil de entender
+1. apresentar ao professor uma visao clara do projeto, do tema escolhido e da divisao das responsabilidades
+2. orientar o grupo no desenvolvimento das proximas etapas do sistema
 
-A prioridade e ter um sistema correto, organizado e apresentavel, sem complicar desnecessariamente.
+Portanto, a proposta atual do projeto e manter uma base simples, funcional e bem documentada, permitindo que o trabalho evolua de forma organizada ate a versao final.
