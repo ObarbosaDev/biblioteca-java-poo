@@ -317,26 +317,3 @@ class LeitorController { // Controller temporario de leitores.
         System.out.println("Excluir leitor em construcao."); // Mostra aviso.
     } // Fim do excluirLeitor.
 } // Fim da classe LeitorController.
-
-class EmprestimoController { // Controller temporario de emprestimos.
-
-    public void registrarEmprestimo() { // Metodo temporario.
-        System.out.println("Registrar emprestimo em construcao."); // Mostra aviso.
-    } // Fim do registrarEmprestimo.
-
-    public void listarEmprestimos() { // Metodo temporario.
-        System.out.println("Listar emprestimos em construcao."); // Mostra aviso.
-    } // Fim do listarEmprestimos.
-
-    public void renovarEmprestimo() { // Metodo temporario.
-        System.out.println("Renovar emprestimo em construcao."); // Mostra aviso.
-    } // Fim do renovarEmprestimo.
-
-    public void registrarDevolucao() { // Metodo temporario.
-        System.out.println("Registrar devolucao em construcao."); // Mostra aviso.
-    } // Fim do registrarDevolucao.
-
-    public void listarEmprestimosAtivos() { // Metodo temporario.
-        System.out.println("Listar emprestimos ativos em construcao."); // Mostra aviso.
-    } // Fim do listarEmprestimosAtivos.
-} // Fim da classe EmprestimoController.

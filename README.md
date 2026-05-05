@@ -93,7 +93,11 @@ biblioteca-java-poo/
 |-- docs/
 |   `-- README.md
 |-- src/
-|   `-- Main.java
+|   |-- Main.java
+|   |-- Emprestimo.java
+|   |-- EmprestimoController.java
+|   |-- Livro.java
+|   `-- Leitor.java
 |-- .gitignore
 `-- README.md
 ```
@@ -115,12 +119,42 @@ Nele estao concentradas, no momento, as responsabilidades de:
 
 Tambem existem, neste momento, classes temporarias de controller dentro do mesmo arquivo.
 
+Ainda existem, dentro do `Main.java`, controllers temporarios para Livro e Leitor.
+
 Essas classes temporarias existem somente para:
 
 - permitir a compilacao do projeto
 - demonstrar o fluxo de navegacao
 - testar a estrutura do menu
 - manter o repositorio simples nesta fase inicial
+
+O controller de Emprestimo ja foi separado em um arquivo proprio.
+
+### `src/Emprestimo.java`
+
+Representa um emprestimo no sistema.
+
+Esse arquivo ja foi integrado ao projeto e contem:
+
+- livro relacionado ao emprestimo
+- leitor relacionado ao emprestimo
+- data do emprestimo
+- data prevista de devolucao
+- status ativo ou devolvido
+- metodo para renovar prazo
+- metodo para registrar devolucao
+
+### `src/EmprestimoController.java`
+
+Controla as chamadas do menu de emprestimos.
+
+No momento, ele usa dados simples de exemplo para permitir que o fluxo funcione enquanto os modulos de Livro e Leitor ainda nao estao completos.
+
+### `src/Livro.java` e `src/Leitor.java`
+
+Esses arquivos existem de forma simples e temporaria para apoiar a parte de Emprestimo.
+
+Eles serao ajustados depois pelos integrantes responsaveis pelos modulos de Livro e Leitor.
 
 ### `docs/`
 
@@ -151,8 +185,12 @@ Isso significa que:
 - a navegacao por opcoes numericas ja foi implementada
 - a leitura de entradas ja foi tratada
 - as chamadas dos modulos ja foram definidas
+- a classe `Emprestimo` ja foi integrada
+- o `EmprestimoController` ja esta separado em arquivo proprio
 
-Por outro lado, os modulos finais de Livro, Leitor e Emprestimo ainda serao implementados nas proximas etapas do trabalho pelos integrantes responsaveis.
+Por outro lado, os modulos finais de Livro e Leitor ainda serao implementados nas proximas etapas pelos integrantes responsaveis.
+
+O modulo de Emprestimo ja tem uma primeira versao integrada, mas ainda podera ser evoluido quando Livro e Leitor estiverem completos.
 
 ## 9. Divisao do grupo
 
@@ -212,6 +250,13 @@ Responsabilidades:
 Resumo da funcao:
 
 Essa parte conecta os demais modulos e representa a operacao principal do sistema.
+
+Status atual:
+
+- a classe `Emprestimo` ja foi adicionada
+- o `EmprestimoController` ja foi separado
+- o fluxo do menu de emprestimos ja chama esse controller
+- a integracao ainda usa `Livro` e `Leitor` simples enquanto os modulos reais nao ficam prontos
 
 ### Pessoa 5 - Revisao, padronizacao, POO e apresentacao
 
@@ -290,16 +335,14 @@ Esses nomes devem ser mantidos para evitar erro de integracao entre o menu e os 
 
 ## 13. Arquivos previstos para as proximas etapas
 
-Nas proximas fases do projeto, ainda deverao ser criados:
+Nas proximas fases do projeto, ainda deverao ser criados ou finalizados:
 
 - `Livro.java`
 - `Leitor.java`
-- `Emprestimo.java`
 - `LivroController.java`
 - `LeitorController.java`
-- `EmprestimoController.java`
 
-Esses arquivos completarao a estrutura final esperada do sistema.
+O arquivo `Emprestimo.java` e o `EmprestimoController.java` ja existem, mas podem receber melhorias durante a integracao final.
 
 ## 14. O que cada modulo deve representar
 
@@ -365,7 +408,7 @@ Essa escolha foi feita para manter o trabalho alinhado com o escopo academico da
 Para compilar e executar a versao atual do sistema, utilize:
 
 ```bash
-javac src/Main.java
+javac src/*.java
 java -cp src Main
 ```
 
