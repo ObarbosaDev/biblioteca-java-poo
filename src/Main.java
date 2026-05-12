@@ -1,4 +1,5 @@
 import java.util.Scanner; // Importa o Scanner.
+import java.lang.reflect.Field; // Importa o Field.
 
 public class Main { // Classe principal.
 
@@ -15,6 +16,7 @@ public class Main { // Classe principal.
         scanner = new Scanner(System.in); // Cria o Scanner.
         livroController = new LivroController(); // Cria o controller de livros.
         leitorController = new LeitorController(); // Cria o controller de leitores.
+        compartilharScanner(leitorController); // Compartilha o Scanner.
         emprestimoController = new EmprestimoController(); // Cria o controller de emprestimos.
 
         int opcao; // Guarda a opcao do menu.
@@ -270,6 +272,18 @@ public class Main { // Classe principal.
             System.out.println(); // Mostra linha vazia.
         } // Fim do for.
     } // Fim do limparTela.
+
+    public static void compartilharScanner(Object controller) { // Compartilha o Scanner.
+        try { // Tenta acessar o campo.
+            Field campoScanner = controller.getClass().getDeclaredField("scanner"); // Busca o campo.
+            campoScanner.setAccessible(true); // Libera o acesso.
+            campoScanner.set(controller, scanner); // Usa o mesmo Scanner.
+        } catch (NoSuchFieldException e) { // Se nao tiver campo.
+            return; // Nao faz nada.
+        } catch (IllegalAccessException e) { // Se nao conseguir acessar.
+            return; // Nao faz nada.
+        } // Fim do try-catch.
+    } // Fim do compartilharScanner.
 } // Fim da classe Main.
 
 class LivroController { // Controller temporario de livros.
@@ -294,26 +308,3 @@ class LivroController { // Controller temporario de livros.
         System.out.println("Excluir livro em construcao."); // Mostra aviso.
     } // Fim do excluirLivro.
 } // Fim da classe LivroController.
-
-class LeitorController { // Controller temporario de leitores.
-
-    public void cadastrarLeitor() { // Metodo temporario.
-        System.out.println("Cadastrar leitor em construcao."); // Mostra aviso.
-    } // Fim do cadastrarLeitor.
-
-    public void listarLeitores() { // Metodo temporario.
-        System.out.println("Listar leitores em construcao."); // Mostra aviso.
-    } // Fim do listarLeitores.
-
-    public void buscarLeitor() { // Metodo temporario.
-        System.out.println("Buscar leitor em construcao."); // Mostra aviso.
-    } // Fim do buscarLeitor.
-
-    public void atualizarLeitor() { // Metodo temporario.
-        System.out.println("Atualizar leitor em construcao."); // Mostra aviso.
-    } // Fim do atualizarLeitor.
-
-    public void excluirLeitor() { // Metodo temporario.
-        System.out.println("Excluir leitor em construcao."); // Mostra aviso.
-    } // Fim do excluirLeitor.
-} // Fim da classe LeitorController.

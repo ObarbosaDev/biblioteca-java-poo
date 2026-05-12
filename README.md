@@ -96,8 +96,9 @@ biblioteca-java-poo/
 |   |-- Main.java
 |   |-- Emprestimo.java
 |   |-- EmprestimoController.java
+|   |-- LeitorController.java
+|   |-- Leitor.java
 |   |-- Livro.java
-|   `-- Leitor.java
 |-- .gitignore
 `-- README.md
 ```
@@ -117,9 +118,9 @@ Nele estao concentradas, no momento, as responsabilidades de:
 - ler as opcoes informadas pelo usuario
 - chamar os metodos responsaveis por cada modulo
 
-Tambem existem, neste momento, classes temporarias de controller dentro do mesmo arquivo.
+Tambem existe, neste momento, uma classe temporaria de controller dentro do mesmo arquivo.
 
-Ainda existem, dentro do `Main.java`, controllers temporarios para Livro e Leitor.
+Ainda existe, dentro do `Main.java`, o controller temporario de Livro.
 
 Essas classes temporarias existem somente para:
 
@@ -128,7 +129,31 @@ Essas classes temporarias existem somente para:
 - testar a estrutura do menu
 - manter o repositorio simples nesta fase inicial
 
-O controller de Emprestimo ja foi separado em um arquivo proprio.
+Os controllers de Leitor e Emprestimo ja foram separados em arquivos proprios.
+
+### `src/Leitor.java`
+
+Representa o leitor da biblioteca.
+
+Esse arquivo ja foi integrado ao projeto e contem:
+
+- id do leitor
+- nome do leitor
+- email do leitor
+- getters e setters
+- metodo `toString()`
+
+### `src/LeitorController.java`
+
+Controla o CRUD de leitores.
+
+Esse arquivo ja foi integrado ao projeto e contem:
+
+- cadastro de leitor
+- listagem de leitores
+- busca por id
+- atualizacao de leitor
+- exclusao de leitor
 
 ### `src/Emprestimo.java`
 
@@ -150,11 +175,11 @@ Controla as chamadas do menu de emprestimos.
 
 No momento, ele usa dados simples de exemplo para permitir que o fluxo funcione enquanto os modulos de Livro e Leitor ainda nao estao completos.
 
-### `src/Livro.java` e `src/Leitor.java`
+### `src/Livro.java`
 
-Esses arquivos existem de forma simples e temporaria para apoiar a parte de Emprestimo.
+Esse arquivo ainda existe de forma simples e temporaria para apoiar a parte de Emprestimo.
 
-Eles serao ajustados depois pelos integrantes responsaveis pelos modulos de Livro e Leitor.
+Ele sera ajustado depois pelo integrante responsavel pelo modulo de Livro.
 
 ### `docs/`
 
@@ -185,12 +210,14 @@ Isso significa que:
 - a navegacao por opcoes numericas ja foi implementada
 - a leitura de entradas ja foi tratada
 - as chamadas dos modulos ja foram definidas
+- a classe `Leitor` ja foi integrada
+- o `LeitorController` ja esta separado em arquivo proprio
 - a classe `Emprestimo` ja foi integrada
 - o `EmprestimoController` ja esta separado em arquivo proprio
 
-Por outro lado, os modulos finais de Livro e Leitor ainda serao implementados nas proximas etapas pelos integrantes responsaveis.
+Por outro lado, o modulo final de Livro ainda sera implementado nas proximas etapas pelo integrante responsavel.
 
-O modulo de Emprestimo ja tem uma primeira versao integrada, mas ainda podera ser evoluido quando Livro e Leitor estiverem completos.
+O modulo de Emprestimo ja tem uma primeira versao integrada, mas ainda podera ser evoluido quando Livro estiver completo.
 
 ## 9. Divisao do grupo
 
@@ -236,6 +263,13 @@ Resumo da funcao:
 
 Essa parte cuida dos usuarios da biblioteca que podem realizar emprestimos.
 
+Status atual:
+
+- a classe `Leitor` ja foi adicionada
+- o `LeitorController` ja foi separado
+- o fluxo do menu de leitores ja chama esse controller
+- o CRUD de leitores ja funciona em memoria
+
 ### Pessoa 4 - Modulo Emprestimo
 
 Responsabilidades:
@@ -256,7 +290,7 @@ Status atual:
 - a classe `Emprestimo` ja foi adicionada
 - o `EmprestimoController` ja foi separado
 - o fluxo do menu de emprestimos ja chama esse controller
-- a integracao ainda usa `Livro` e `Leitor` simples enquanto os modulos reais nao ficam prontos
+- a integracao ainda usa `Livro` simples enquanto o modulo real de livros nao fica pronto
 
 ### Pessoa 5 - Revisao, padronizacao, POO e apresentacao
 
@@ -338,11 +372,9 @@ Esses nomes devem ser mantidos para evitar erro de integracao entre o menu e os 
 Nas proximas fases do projeto, ainda deverao ser criados ou finalizados:
 
 - `Livro.java`
-- `Leitor.java`
 - `LivroController.java`
-- `LeitorController.java`
 
-O arquivo `Emprestimo.java` e o `EmprestimoController.java` ja existem, mas podem receber melhorias durante a integracao final.
+Os arquivos `Leitor.java`, `LeitorController.java`, `Emprestimo.java` e `EmprestimoController.java` ja existem, mas podem receber ajustes de integracao final caso o grupo combine.
 
 ## 14. O que cada modulo deve representar
 

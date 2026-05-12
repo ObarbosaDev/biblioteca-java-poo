@@ -3,8 +3,12 @@ public class EmprestimoController { // Controller de emprestimos.
     private Emprestimo emprestimo; // Guarda um emprestimo simples.
 
     public void registrarEmprestimo() { // Registra um emprestimo.
-        Livro livro = new Livro("Livro de exemplo"); // Cria livro temporario.
-        Leitor leitor = new Leitor("Leitor de exemplo"); // Cria leitor temporario.
+        Livro livro = new Livro("Livro de exemplo"); 
+        Leitor leitor = new Leitor(
+    1,
+    "pedro",
+    "pedrocborges@gmail.com"
+);
         emprestimo = new Emprestimo(livro, leitor); // Cria o emprestimo.
         System.out.println("Emprestimo registrado com sucesso."); // Mostra mensagem.
         System.out.println(emprestimo); // Mostra o emprestimo.
