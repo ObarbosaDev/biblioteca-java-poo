@@ -2,6 +2,6 @@
 
 Use esta pasta para guardar:
 
-- roteiro da apresentacao
-- observacoes do grupo
-- arquivo do PowerPoint
+- roteiro da apresentação;
+- observações do grupo;
+- arquivo do PowerPoint.

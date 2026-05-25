@@ -20,13 +20,13 @@ public class LeitorController {
     public void cadastrarLeitor() {
 
         System.out.print("Digite o ID do leitor: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = lerId();
 
         System.out.print("Digite o nome do leitor: ");
-        String nome = scanner.nextLine();
+        String nome = lerTextoObrigatorio("Nome invalido. Digite o nome do leitor: ");
 
         System.out.print("Digite o email do leitor: ");
-        String email = scanner.nextLine();
+        String email = lerTextoObrigatorio("Email invalido. Digite o email do leitor: ");
 
         Leitor leitor = new Leitor(id, nome, email);
 
@@ -54,7 +54,7 @@ public class LeitorController {
     public void buscarLeitor() {
 
         System.out.print("Digite o ID do leitor: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = lerId();
 
         for(Leitor leitor : leitores) {
 
@@ -72,17 +72,17 @@ public class LeitorController {
     public void atualizarLeitor() {
 
         System.out.print("Digite o ID do leitor: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = lerId();
 
         for(Leitor leitor : leitores) {
 
             if(leitor.getId() == id) {
 
                 System.out.print("Novo nome: ");
-                String nome = scanner.nextLine();
+                String nome = lerTextoObrigatorio("Nome invalido. Digite o novo nome: ");
 
                 System.out.print("Novo email: ");
-                String email = scanner.nextLine();
+                String email = lerTextoObrigatorio("Email invalido. Digite o novo email: ");
 
                 leitor.setNome(nome);
                 leitor.setEmail(email);
@@ -99,7 +99,7 @@ public class LeitorController {
     public void excluirLeitor() {
 
         System.out.print("Digite o ID do leitor: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = lerId();
 
         for(Leitor leitor : leitores) {
 
@@ -113,5 +113,32 @@ public class LeitorController {
         }
 
         System.out.println("Leitor nao encontrado.");
+    }
+
+    private int lerId() {
+
+        while(true) {
+
+            try {
+
+                return Integer.parseInt(scanner.nextLine());
+            } catch(NumberFormatException e) {
+
+                System.out.print("ID invalido. Digite apenas numeros: ");
+            }
+        }
+    }
+
+    private String lerTextoObrigatorio(String mensagemErro) {
+
+        String texto = scanner.nextLine();
+
+        while(texto.trim().isEmpty()) {
+
+            System.out.print(mensagemErro);
+            texto = scanner.nextLine();
+        }
+
+        return texto;
     }
 }

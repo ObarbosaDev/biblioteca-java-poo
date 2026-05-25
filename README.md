@@ -1,76 +1,76 @@
 # biblioteca-java-poo
 
-Projeto final da disciplina de Programacao Orientada a Objetos.
+Projeto final da disciplina de Programação Orientada a Objetos.
 
-## 1. Visao geral do projeto
+## 1. Visão geral do projeto
 
-Este repositorio contem o desenvolvimento de um sistema simples em Java com interface baseada em linha de comando.
+Este repositório contém o desenvolvimento de um sistema simples em Java com interface baseada em linha de comando.
 
 O tema escolhido pelo grupo foi:
 
-**Sistema de Gestao de Acervo e Emprestimos de Biblioteca**
+**Sistema de Gestão de Acervo e Empréstimos de Biblioteca**
 
-A proposta do projeto e representar, de forma academica e funcional, uma rotina basica de biblioteca, permitindo o gerenciamento de livros, leitores e emprestimos por meio de menus exibidos no terminal.
+A proposta do projeto é representar, de forma acadêmica e funcional, uma rotina básica de biblioteca, permitindo o gerenciamento de livros, leitores e empréstimos por meio de menus exibidos no terminal.
 
 O sistema foi pensado para ser:
 
-- simples de entender
-- organizado em responsabilidades
-- compativel com o conteudo estudado em aula
-- facil de evoluir em grupo
+- simples de entender;
+- organizado em responsabilidades;
+- compatível com o conteúdo estudado em aula;
+- fácil de evoluir em grupo.
 
 ## 2. Contexto do trabalho
 
-O trabalho pratico foi proposto com o objetivo de aplicar, em um projeto real de pequena escala, os conceitos fundamentais da disciplina.
+O trabalho prático foi proposto com o objetivo de aplicar, em um projeto real de pequena escala, os conceitos fundamentais da disciplina.
 
-Entre os principais pontos esperados no desenvolvimento estao:
+Entre os principais pontos esperados no desenvolvimento estão:
 
-- uso da linguagem Java
-- aplicacao de Programacao Orientada a Objetos
-- criacao de modulos com CRUD
-- organizacao do codigo em classes
-- interacao do usuario por interface CLI
+- uso da linguagem Java;
+- aplicação de Programação Orientada a Objetos;
+- criação de módulos com CRUD;
+- organização do código em classes;
+- interação do usuário por interface CLI.
 
-Mais do que apenas exibir menus, o sistema precisa demonstrar estrutura, separacao de responsabilidades e coerencia entre os modulos que compoem o projeto.
+Mais do que apenas exibir menus, o sistema precisa demonstrar estrutura, separação de responsabilidades e coerência entre os módulos que compõem o projeto.
 
-## 3. Objetivo academico
+## 3. Objetivo acadêmico
 
-Do ponto de vista da disciplina, este projeto tem como objetivo consolidar a pratica de:
+Do ponto de vista da disciplina, este projeto tem como objetivo consolidar a prática de:
 
-- classes e objetos
-- atributos e metodos
-- encapsulamento
-- abstracao
-- heranca, quando aplicavel
-- polimorfismo, quando aplicavel
-- modularizacao do codigo
-- navegacao por menus
-- leitura de dados com `Scanner`
+- classes e objetos;
+- atributos e métodos;
+- encapsulamento;
+- abstração;
+- herança, quando aplicável;
+- polimorfismo, quando aplicável;
+- modularização do código;
+- navegação por menus;
+- leitura de dados com `Scanner`.
 
-Assim, o sistema funciona nao apenas como um programa executavel, mas tambem como um exercicio de modelagem e organizacao de software em Java.
+Assim, o sistema funciona não apenas como um programa executável, mas também como um exercício de modelagem e organização de software em Java.
 
 ## 4. Objetivo do sistema
 
-O sistema tem como finalidade controlar tres areas principais de uma biblioteca:
+O sistema tem como finalidade controlar três áreas principais de uma biblioteca:
 
-- cadastro e consulta de livros
-- cadastro e consulta de leitores
-- controle de emprestimos e devolucoes
+- cadastro e consulta de livros;
+- cadastro e consulta de leitores;
+- controle de empréstimos e devoluções.
 
-Na versao final, o sistema deve permitir:
+Na versão final, o sistema deve permitir:
 
-- cadastrar registros
-- listar registros
-- buscar registros
-- atualizar registros
-- excluir registros
+- cadastrar registros;
+- listar registros;
+- buscar registros;
+- atualizar registros;
+- excluir registros.
 
-No caso do modulo de emprestimos, tambem se espera:
+No caso do módulo de empréstimos, também se espera:
 
-- registrar um emprestimo
-- renovar um emprestimo
-- registrar devolucao
-- listar emprestimos ativos
+- registrar um empréstimo;
+- renovar um empréstimo;
+- registrar devolução;
+- listar empréstimos ativos.
 
 ## 5. Tema escolhido
 
@@ -78,15 +78,15 @@ O tema biblioteca foi escolhido porque oferece uma estrutura clara de relacionam
 
 Dentro desse contexto:
 
-- um `Livro` representa um item do acervo
-- um `Leitor` representa a pessoa que utiliza o sistema
-- um `Emprestimo` representa a relacao entre livro e leitor em uma operacao de retirada
+- um `Livro` representa um item do acervo;
+- um `Leitor` representa a pessoa que utiliza o sistema;
+- um `Emprestimo` representa a relação entre livro e leitor em uma operação de retirada.
 
-Isso permite ao grupo trabalhar com modulos bem definidos e, ao mesmo tempo, conectados entre si.
+Isso permite ao grupo trabalhar com módulos bem definidos e, ao mesmo tempo, conectados entre si.
 
-## 6. Estrutura atual do repositorio
+## 6. Estrutura atual do repositório
 
-Atualmente, o repositorio foi mantido em uma estrutura inicial simples, para facilitar o entendimento, a apresentacao parcial do trabalho e a integracao entre os integrantes.
+Atualmente, o repositório possui uma estrutura simples, para facilitar o entendimento, a apresentação do trabalho e a integração entre os integrantes.
 
 ```text
 biblioteca-java-poo/
@@ -104,88 +104,88 @@ biblioteca-java-poo/
 `-- README.md
 ```
 
-## 7. Explicacao da estrutura
+## 7. Explicação da estrutura
 
 ### `src/Main.java`
 
-E o arquivo principal do sistema.
+É o arquivo principal do sistema.
 
-Nele estao concentradas, no momento, as responsabilidades de:
+Nele estão concentradas, no momento, as responsabilidades de:
 
-- iniciar o programa
-- criar o menu principal
-- criar os submenus
-- controlar a navegacao no terminal
-- ler as opcoes informadas pelo usuario
-- chamar os metodos responsaveis por cada modulo
+- iniciar o programa;
+- criar o menu principal;
+- criar os submenus;
+- controlar a navegação no terminal;
+- ler as opções informadas pelo usuário;
+- chamar os métodos responsáveis por cada módulo.
 
-Os controllers dos modulos ja foram separados em arquivos proprios.
+Os controllers dos módulos já foram separados em arquivos próprios.
 
 ### `src/Leitor.java`
 
 Representa o leitor da biblioteca.
 
-Esse arquivo ja foi integrado ao projeto e contem:
+Esse arquivo já foi integrado ao projeto e contém:
 
-- id do leitor
-- nome do leitor
-- email do leitor
-- getters e setters
-- metodo `toString()`
+- id do leitor;
+- nome do leitor;
+- e-mail do leitor;
+- getters e setters;
+- método `toString()`.
 
 ### `src/LeitorController.java`
 
 Controla o CRUD de leitores.
 
-Esse arquivo ja foi integrado ao projeto e contem:
+Esse arquivo já foi integrado ao projeto e contém:
 
-- cadastro de leitor
-- listagem de leitores
-- busca por id
-- atualizacao de leitor
-- exclusao de leitor
+- cadastro de leitor;
+- listagem de leitores;
+- busca por id;
+- atualização de leitor;
+- exclusão de leitor.
 
 ### `src/Emprestimo.java`
 
-Representa um emprestimo no sistema.
+Representa um empréstimo no sistema.
 
-Esse arquivo ja foi integrado ao projeto e contem:
+Esse arquivo já foi integrado ao projeto e contém:
 
-- livro relacionado ao emprestimo
-- leitor relacionado ao emprestimo
-- data do emprestimo
-- data prevista de devolucao
-- status ativo ou devolvido
-- metodo para renovar prazo
-- metodo para registrar devolucao
+- livro relacionado ao empréstimo;
+- leitor relacionado ao empréstimo;
+- data do empréstimo;
+- data prevista de devolução;
+- status ativo ou devolvido;
+- método para renovar prazo;
+- método para registrar devolução.
 
 ### `src/EmprestimoController.java`
 
-Controla as chamadas do menu de emprestimos.
+Controla as chamadas do menu de empréstimos.
 
-No momento, ele usa dados simples de exemplo para permitir que o fluxo funcione enquanto os modulos de Livro e Leitor ainda nao estao completos.
+No momento, ele usa dados simples de exemplo para permitir que o fluxo funcione enquanto a integração completa entre livros, leitores e empréstimos ainda não é feita.
 
 ### `src/Livro.java`
 
 Representa o livro da biblioteca.
 
-Esse arquivo contem:
+Esse arquivo contém:
 
-- titulo do livro
-- status de disponibilidade
-- getters e setters
+- título do livro;
+- status de disponibilidade;
+- getters e setters.
 
 ### `src/LivroController.java`
 
 Controla o CRUD de livros.
 
-Esse arquivo ja foi integrado ao projeto e contem:
+Esse arquivo já foi integrado ao projeto e contém:
 
-- cadastro de livro
-- listagem de livros
-- busca por titulo
-- atualizacao de titulo
-- exclusao de livro
+- cadastro de livro;
+- listagem de livros;
+- busca por título;
+- atualização de título;
+- exclusão de livro.
 
 ### `docs/`
 
@@ -193,130 +193,130 @@ Esta pasta foi reservada para os materiais de apoio do trabalho.
 
 Ela pode armazenar:
 
-- roteiro da apresentacao
-- observacoes do grupo
-- estrutura da fala
-- arquivo final do PowerPoint
+- roteiro da apresentação;
+- observações do grupo;
+- estrutura da fala;
+- arquivo final do PowerPoint.
 
 ### `README.md`
 
-Este arquivo tem duas funcoes principais:
+Este arquivo tem duas funções principais:
 
-- documentar o projeto para leitura geral
-- orientar tecnicamente o grupo sobre a divisao e a continuidade do desenvolvimento
+- documentar o projeto para leitura geral;
+- orientar tecnicamente o grupo sobre a divisão e a continuidade do desenvolvimento.
 
 ## 8. Estado atual do projeto
 
-No estado atual, o projeto ja possui a parte inicial da estrutura principal montada.
+No estado atual, o projeto já possui a estrutura principal montada.
 
 Isso significa que:
 
-- o menu principal ja foi criado
-- os submenus ja foram organizados
-- a navegacao por opcoes numericas ja foi implementada
-- a leitura de entradas ja foi tratada
-- as chamadas dos modulos ja foram definidas
-- a classe `Livro` ja foi integrada
-- o `LivroController` ja esta separado em arquivo proprio
-- a classe `Leitor` ja foi integrada
-- o `LeitorController` ja esta separado em arquivo proprio
-- a classe `Emprestimo` ja foi integrada
-- o `EmprestimoController` ja esta separado em arquivo proprio
+- o menu principal já foi criado;
+- os submenus já foram organizados;
+- a navegação por opções numéricas já foi implementada;
+- a leitura de entradas já foi tratada;
+- as chamadas dos módulos já foram definidas;
+- a classe `Livro` já foi integrada;
+- o `LivroController` já está separado em arquivo próprio;
+- a classe `Leitor` já foi integrada;
+- o `LeitorController` já está separado em arquivo próprio;
+- a classe `Emprestimo` já foi integrada;
+- o `EmprestimoController` já está separado em arquivo próprio.
 
-Os tres modulos principais ja possuem arquivos integrados ao menu.
+Os três módulos principais já possuem arquivos integrados ao menu.
 
-## 9. Divisao do grupo
+## 9. Divisão do grupo
 
-Para facilitar a producao do sistema e evitar sobrecarga em uma unica pessoa, o trabalho foi dividido em 5 partes.
+Para facilitar a produção do sistema e evitar sobrecarga em uma única pessoa, o trabalho foi dividido em 5 partes.
 
 ### Pessoa 1 - Estrutura principal e menu CLI
 
 Responsabilidades:
 
-- criar a classe `Main`
-- montar o menu principal
-- montar os submenus
-- controlar a navegacao por opcoes numericas
-- organizar a execucao geral do sistema
-- integrar as chamadas para os modulos
+- criar a classe `Main`;
+- montar o menu principal;
+- montar os submenus;
+- controlar a navegação por opções numéricas;
+- organizar a execução geral do sistema;
+- integrar as chamadas para os módulos.
 
-Resumo da funcao:
+Resumo da função:
 
-Essa parte e responsavel por garantir que o sistema tenha uma base funcional de interacao com o usuario, permitindo que os outros modulos sejam conectados depois.
+Essa parte é responsável por garantir que o sistema tenha uma base funcional de interação com o usuário, permitindo que os outros módulos sejam conectados.
 
-### Pessoa 2 - Modulo Livro
+### Pessoa 2 - Módulo Livro
 
 Responsabilidades:
 
-- criar a classe `Livro`
-- definir atributos, construtor, getters e setters
-- implementar o CRUD de livros
-- controlar o status do livro, como disponivel ou emprestado
+- criar a classe `Livro`;
+- definir atributos, construtor, getters e setters;
+- implementar o CRUD de livros;
+- controlar o status do livro, como disponível ou emprestado.
 
-Resumo da funcao:
+Resumo da função:
 
 Essa parte cuida do acervo da biblioteca, ou seja, dos livros cadastrados no sistema.
 
 Status atual:
 
-- a classe `Livro` ja foi adicionada
-- o `LivroController` ja foi separado
-- o fluxo do menu de livros ja chama esse controller
-- o CRUD de livros ja funciona em memoria
+- a classe `Livro` já foi adicionada;
+- o `LivroController` já foi separado;
+- o fluxo do menu de livros já chama esse controller;
+- o CRUD de livros já funciona em memória.
 
-### Pessoa 3 - Modulo Leitor
+### Pessoa 3 - Módulo Leitor
 
 Responsabilidades:
 
-- criar a classe `Leitor`
-- definir atributos, construtor, getters e setters
-- implementar o CRUD de leitores
+- criar a classe `Leitor`;
+- definir atributos, construtor, getters e setters;
+- implementar o CRUD de leitores.
 
-Resumo da funcao:
+Resumo da função:
 
-Essa parte cuida dos usuarios da biblioteca que podem realizar emprestimos.
+Essa parte cuida dos usuários da biblioteca que podem realizar empréstimos.
 
 Status atual:
 
-- a classe `Leitor` ja foi adicionada
-- o `LeitorController` ja foi separado
-- o fluxo do menu de leitores ja chama esse controller
-- o CRUD de leitores ja funciona em memoria
+- a classe `Leitor` já foi adicionada;
+- o `LeitorController` já foi separado;
+- o fluxo do menu de leitores já chama esse controller;
+- o CRUD de leitores já funciona em memória.
 
-### Pessoa 4 - Modulo Emprestimo
+### Pessoa 4 - Módulo Empréstimo
 
 Responsabilidades:
 
-- criar a classe `Emprestimo`
-- relacionar livro, leitor e data
-- implementar o CRUD de emprestimos
-- registrar devolucao
-- renovar prazo
-- listar emprestimos ativos
+- criar a classe `Emprestimo`;
+- relacionar livro, leitor e data;
+- implementar o CRUD de empréstimos;
+- registrar devolução;
+- renovar prazo;
+- listar empréstimos ativos.
 
-Resumo da funcao:
+Resumo da função:
 
-Essa parte conecta os demais modulos e representa a operacao principal do sistema.
+Essa parte conecta os demais módulos e representa a operação principal do sistema.
 
 Status atual:
 
-- a classe `Emprestimo` ja foi adicionada
-- o `EmprestimoController` ja foi separado
-- o fluxo do menu de emprestimos ja chama esse controller
-- o fluxo basico de emprestimos ja funciona com dados de exemplo
+- a classe `Emprestimo` já foi adicionada;
+- o `EmprestimoController` já foi separado;
+- o fluxo do menu de empréstimos já chama esse controller;
+- o fluxo básico de empréstimos já funciona com dados de exemplo.
 
-### Pessoa 5 - Revisao, padronizacao, POO e apresentacao
+### Pessoa 5 - Revisão, padronização, POO e apresentação
 
 Responsabilidades:
 
-- revisar o codigo completo
-- padronizar nomes de classes, metodos e variaveis
-- verificar a coerencia entre os modulos
-- conferir a aplicacao dos conceitos de POO
-- montar a apresentacao
-- organizar a demonstracao final
+- revisar o código completo;
+- padronizar nomes de classes, métodos e variáveis;
+- verificar a coerência entre os módulos;
+- conferir a aplicação dos conceitos de POO;
+- montar a apresentação;
+- organizar a demonstração final.
 
-Resumo da funcao:
+Resumo da função:
 
 Essa parte ajuda a dar unidade ao projeto e melhora a qualidade final antes da entrega.
 
@@ -324,120 +324,120 @@ Essa parte ajuda a dar unidade ao projeto e melhora a qualidade final antes da e
 
 O funcionamento geral do sistema foi planejado de forma simples:
 
-1. o programa e iniciado pelo `Main`
-2. o menu principal e exibido
-3. o usuario escolhe o modulo desejado
-4. o sistema abre o submenu correspondente
-5. o `Main` chama o metodo do controller ligado a opcao escolhida
-6. o controller executa a operacao do modulo
+1. o programa é iniciado pelo `Main`;
+2. o menu principal é exibido;
+3. o usuário escolhe o módulo desejado;
+4. o sistema abre o submenu correspondente;
+5. o `Main` chama o método do controller ligado à opção escolhida;
+6. o controller executa a operação do módulo.
 
-Esse fluxo foi definido para deixar o sistema facil de compreender e tambem para evitar concentrar toda a logica em um unico bloco de codigo.
+Esse fluxo foi definido para deixar o sistema fácil de compreender e também para evitar concentrar toda a lógica em um único bloco de código.
 
-## 11. Fluxo de integracao entre as partes
+## 11. Fluxo de integração entre as partes
 
-Quando os colegas concluirem seus modulos, a integracao esperada sera:
+Na integração atual:
 
-1. o `Main.java` chamara os controllers reais
-2. os controllers executarao as operacoes de cada modulo
-3. as classes de modelo representarao os dados do sistema
-4. o resultado das operacoes sera mostrado no terminal
+1. o `Main.java` chama os controllers;
+2. os controllers executam as operações de cada módulo;
+3. as classes de modelo representam os dados do sistema;
+4. o resultado das operações é mostrado no terminal.
 
-Exemplo esperado:
+Exemplo:
 
-1. usuario escolhe `1 - Gerenciar Livros`
-2. usuario escolhe `1 - Cadastrar livro`
-3. o `Main` chama `livroController.cadastrarLivro();`
-4. o controller executa o cadastro
-5. a resposta e exibida para o usuario
+1. usuário escolhe `1 - Gerenciar Livros`;
+2. usuário escolhe `1 - Cadastrar livro`;
+3. o `Main` chama `livroController.cadastrarLivro();`;
+4. o controller executa o cadastro;
+5. a resposta é exibida para o usuário.
 
-## 12. Padrao de metodos ja definido no Main
+## 12. Padrão de métodos definido no Main
 
-Para que o grupo trabalhe com compatibilidade, o `Main.java` ja define os nomes dos metodos que deverao existir nos controllers.
+Para que o grupo trabalhe com compatibilidade, o `Main.java` define os nomes dos métodos que devem existir nos controllers.
 
-### Metodos esperados em `LivroController`
+### Métodos esperados em `LivroController`
 
-- `cadastrarLivro()`
-- `listarLivros()`
-- `buscarLivro()`
-- `atualizarLivro()`
-- `excluirLivro()`
+- `cadastrarLivro()`;
+- `listarLivros()`;
+- `buscarLivro()`;
+- `atualizarLivro()`;
+- `excluirLivro()`.
 
-### Metodos esperados em `LeitorController`
+### Métodos esperados em `LeitorController`
 
-- `cadastrarLeitor()`
-- `listarLeitores()`
-- `buscarLeitor()`
-- `atualizarLeitor()`
-- `excluirLeitor()`
+- `cadastrarLeitor()`;
+- `listarLeitores()`;
+- `buscarLeitor()`;
+- `atualizarLeitor()`;
+- `excluirLeitor()`.
 
-### Metodos esperados em `EmprestimoController`
+### Métodos esperados em `EmprestimoController`
 
-- `registrarEmprestimo()`
-- `listarEmprestimos()`
-- `renovarEmprestimo()`
-- `registrarDevolucao()`
-- `listarEmprestimosAtivos()`
+- `registrarEmprestimo()`;
+- `listarEmprestimos()`;
+- `renovarEmprestimo()`;
+- `registrarDevolucao()`;
+- `listarEmprestimosAtivos()`.
 
-Esses nomes devem ser mantidos para evitar erro de integracao entre o menu e os modulos.
+Esses nomes devem ser mantidos para evitar erro de integração entre o menu e os módulos.
 
-## 13. Situacao dos arquivos principais
+## 13. Situação dos arquivos principais
 
-Os principais arquivos do sistema ja estao presentes:
+Os principais arquivos do sistema já estão presentes:
 
-- `Livro.java`
-- `LivroController.java`
-- `Leitor.java`
-- `LeitorController.java`
-- `Emprestimo.java`
-- `EmprestimoController.java`
-- `Main.java`
+- `Livro.java`;
+- `LivroController.java`;
+- `Leitor.java`;
+- `LeitorController.java`;
+- `Emprestimo.java`;
+- `EmprestimoController.java`;
+- `Main.java`.
 
-Ainda podem ocorrer ajustes de integracao final, principalmente para fazer o modulo de Emprestimo usar diretamente os livros e leitores cadastrados pelos outros modulos.
+Ainda podem ocorrer ajustes de integração final, principalmente para fazer o módulo de empréstimo usar diretamente os livros e leitores cadastrados pelos outros módulos.
 
-## 14. O que cada modulo deve representar
+## 14. O que cada módulo representa
 
 ### Livro
 
-Pode conter informacoes como:
+Pode conter informações como:
 
-- codigo
-- titulo
-- autor
-- ano
-- disponibilidade
+- código;
+- título;
+- autor;
+- ano;
+- disponibilidade.
 
 ### Leitor
 
-Pode conter informacoes como:
+Pode conter informações como:
 
-- codigo
-- nome
-- matricula ou cpf
-- telefone
+- código;
+- nome;
+- matrícula ou CPF;
+- telefone.
 
-### Emprestimo
+### Empréstimo
 
-Pode conter informacoes como:
+Pode conter informações como:
 
-- codigo do emprestimo
-- livro relacionado
-- leitor relacionado
-- data do emprestimo
-- data prevista de devolucao
-- status do emprestimo
+- código do empréstimo;
+- livro relacionado;
+- leitor relacionado;
+- data do empréstimo;
+- data prevista de devolução;
+- status do empréstimo.
 
-## 15. Decisao de simplicidade da estrutura atual
+## 15. Decisão de simplicidade da estrutura atual
 
-Mesmo sendo possivel criar uma estrutura com varios arquivos e pastas desde o inicio, nesta fase o repositorio foi mantido com uma organizacao mais simples.
+Mesmo sendo possível criar uma estrutura com vários arquivos e pastas desde o início, o repositório foi mantido com uma organização simples.
 
-Essa decisao foi tomada para:
+Essa decisão foi tomada para:
 
-- evitar confusao para integrantes iniciantes
-- facilitar a leitura do professor
-- permitir uma primeira versao funcional do menu
-- reduzir erros de organizacao antes da etapa de integracao final
+- evitar confusão para integrantes iniciantes;
+- facilitar a leitura do professor;
+- permitir uma versão funcional do menu;
+- reduzir erros de organização antes da integração final.
 
-Assim, a estrutura atual privilegia clareza e compreensao, sem impedir a evolucao posterior do projeto.
+Assim, a estrutura atual privilegia clareza e compreensão, sem impedir a evolução posterior do projeto.
 
 ## 16. Tecnologias e abordagem utilizada
 
@@ -445,17 +445,17 @@ O projeto foi planejado com base em uma abordagem propositalmente simples, sem o
 
 Foram adotados:
 
-- Java puro
-- `Scanner` para entrada de dados
-- `switch-case` para navegacao dos menus
-- metodos separados para cada responsabilidade
-- interface em terminal
+- Java puro;
+- `Scanner` para entrada de dados;
+- `switch-case` para navegação dos menus;
+- métodos separados para cada responsabilidade;
+- interface em terminal.
 
-Essa escolha foi feita para manter o trabalho alinhado com o escopo academico da disciplina.
+Essa escolha foi feita para manter o trabalho alinhado com o escopo acadêmico da disciplina.
 
 ## 17. Como executar
 
-Para compilar e executar a versao atual do sistema, utilize:
+Para compilar e executar a versão atual do sistema, utilize:
 
 ```bash
 javac src/*.java
@@ -464,16 +464,16 @@ java -cp src Main
 
 ## 18. Entrega final esperada
 
-Ao final do desenvolvimento, o grupo devera entregar:
+Ao final do desenvolvimento, o grupo deverá entregar:
 
-- codigo-fonte completo do sistema
-- apresentacao em PowerPoint
+- código-fonte completo do sistema;
+- apresentação em PowerPoint.
 
-## 19. Consideracoes finais
+## 19. Considerações finais
 
-Este repositorio foi organizado para servir a dois objetivos ao mesmo tempo:
+Este repositório foi organizado para servir a dois objetivos ao mesmo tempo:
 
-1. apresentar ao professor uma visao clara do projeto, do tema escolhido e da divisao das responsabilidades
-2. orientar o grupo no desenvolvimento das proximas etapas do sistema
+1. apresentar ao professor uma visão clara do projeto, do tema escolhido e da divisão das responsabilidades;
+2. orientar o grupo no desenvolvimento das próximas etapas do sistema.
 
-Portanto, a proposta atual do projeto e manter uma base simples, funcional e bem documentada, permitindo que o trabalho evolua de forma organizada ate a versao final.
+Portanto, a proposta atual do projeto é manter uma base simples, funcional e bem documentada, permitindo que o trabalho evolua de forma organizada até a versão final.

@@ -42,7 +42,7 @@ public class Leitor {
         this.email = email;
     }
 
-    // Mostrar informações
+    // Mostrar informacoes
     @Override
     public String toString() {
 
