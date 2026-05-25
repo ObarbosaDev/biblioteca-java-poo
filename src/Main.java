@@ -1,5 +1,4 @@
 import java.util.Scanner; // Importa o Scanner.
-import java.lang.reflect.Field; // Importa o Field.
 
 public class Main { // Classe principal.
 
@@ -14,9 +13,8 @@ public class Main { // Classe principal.
 
     public static void iniciarSistema() { // Inicia o sistema.
         scanner = new Scanner(System.in); // Cria o Scanner.
-        livroController = new LivroController(); // Cria o controller de livros.
-        leitorController = new LeitorController(); // Cria o controller de leitores.
-        compartilharScanner(leitorController); // Compartilha o Scanner.
+        livroController = new LivroController(scanner); // Cria o controller de livros.
+        leitorController = new LeitorController(scanner); // Cria o controller de leitores.
         emprestimoController = new EmprestimoController(); // Cria o controller de emprestimos.
 
         int opcao; // Guarda a opcao do menu.
@@ -273,38 +271,4 @@ public class Main { // Classe principal.
         } // Fim do for.
     } // Fim do limparTela.
 
-    public static void compartilharScanner(Object controller) { // Compartilha o Scanner.
-        try { // Tenta acessar o campo.
-            Field campoScanner = controller.getClass().getDeclaredField("scanner"); // Busca o campo.
-            campoScanner.setAccessible(true); // Libera o acesso.
-            campoScanner.set(controller, scanner); // Usa o mesmo Scanner.
-        } catch (NoSuchFieldException e) { // Se nao tiver campo.
-            return; // Nao faz nada.
-        } catch (IllegalAccessException e) { // Se nao conseguir acessar.
-            return; // Nao faz nada.
-        } // Fim do try-catch.
-    } // Fim do compartilharScanner.
 } // Fim da classe Main.
-
-class LivroController { // Controller temporario de livros.
-
-    public void cadastrarLivro() { // Metodo temporario.
-        System.out.println("Cadastrar livro em construcao."); // Mostra aviso.
-    } // Fim do cadastrarLivro.
-
-    public void listarLivros() { // Metodo temporario.
-        System.out.println("Listar livros em construcao."); // Mostra aviso.
-    } // Fim do listarLivros.
-
-    public void buscarLivro() { // Metodo temporario.
-        System.out.println("Buscar livro em construcao."); // Mostra aviso.
-    } // Fim do buscarLivro.
-
-    public void atualizarLivro() { // Metodo temporario.
-        System.out.println("Atualizar livro em construcao."); // Mostra aviso.
-    } // Fim do atualizarLivro.
-
-    public void excluirLivro() { // Metodo temporario.
-        System.out.println("Excluir livro em construcao."); // Mostra aviso.
-    } // Fim do excluirLivro.
-} // Fim da classe LivroController.

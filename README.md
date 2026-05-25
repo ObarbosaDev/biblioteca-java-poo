@@ -98,6 +98,7 @@ biblioteca-java-poo/
 |   |-- EmprestimoController.java
 |   |-- LeitorController.java
 |   |-- Leitor.java
+|   |-- LivroController.java
 |   |-- Livro.java
 |-- .gitignore
 `-- README.md
@@ -118,18 +119,7 @@ Nele estao concentradas, no momento, as responsabilidades de:
 - ler as opcoes informadas pelo usuario
 - chamar os metodos responsaveis por cada modulo
 
-Tambem existe, neste momento, uma classe temporaria de controller dentro do mesmo arquivo.
-
-Ainda existe, dentro do `Main.java`, o controller temporario de Livro.
-
-Essas classes temporarias existem somente para:
-
-- permitir a compilacao do projeto
-- demonstrar o fluxo de navegacao
-- testar a estrutura do menu
-- manter o repositorio simples nesta fase inicial
-
-Os controllers de Leitor e Emprestimo ja foram separados em arquivos proprios.
+Os controllers dos modulos ja foram separados em arquivos proprios.
 
 ### `src/Leitor.java`
 
@@ -177,9 +167,25 @@ No momento, ele usa dados simples de exemplo para permitir que o fluxo funcione 
 
 ### `src/Livro.java`
 
-Esse arquivo ainda existe de forma simples e temporaria para apoiar a parte de Emprestimo.
+Representa o livro da biblioteca.
 
-Ele sera ajustado depois pelo integrante responsavel pelo modulo de Livro.
+Esse arquivo contem:
+
+- titulo do livro
+- status de disponibilidade
+- getters e setters
+
+### `src/LivroController.java`
+
+Controla o CRUD de livros.
+
+Esse arquivo ja foi integrado ao projeto e contem:
+
+- cadastro de livro
+- listagem de livros
+- busca por titulo
+- atualizacao de titulo
+- exclusao de livro
 
 ### `docs/`
 
@@ -210,14 +216,14 @@ Isso significa que:
 - a navegacao por opcoes numericas ja foi implementada
 - a leitura de entradas ja foi tratada
 - as chamadas dos modulos ja foram definidas
+- a classe `Livro` ja foi integrada
+- o `LivroController` ja esta separado em arquivo proprio
 - a classe `Leitor` ja foi integrada
 - o `LeitorController` ja esta separado em arquivo proprio
 - a classe `Emprestimo` ja foi integrada
 - o `EmprestimoController` ja esta separado em arquivo proprio
 
-Por outro lado, o modulo final de Livro ainda sera implementado nas proximas etapas pelo integrante responsavel.
-
-O modulo de Emprestimo ja tem uma primeira versao integrada, mas ainda podera ser evoluido quando Livro estiver completo.
+Os tres modulos principais ja possuem arquivos integrados ao menu.
 
 ## 9. Divisao do grupo
 
@@ -250,6 +256,13 @@ Responsabilidades:
 Resumo da funcao:
 
 Essa parte cuida do acervo da biblioteca, ou seja, dos livros cadastrados no sistema.
+
+Status atual:
+
+- a classe `Livro` ja foi adicionada
+- o `LivroController` ja foi separado
+- o fluxo do menu de livros ja chama esse controller
+- o CRUD de livros ja funciona em memoria
 
 ### Pessoa 3 - Modulo Leitor
 
@@ -290,7 +303,7 @@ Status atual:
 - a classe `Emprestimo` ja foi adicionada
 - o `EmprestimoController` ja foi separado
 - o fluxo do menu de emprestimos ja chama esse controller
-- a integracao ainda usa `Livro` simples enquanto o modulo real de livros nao fica pronto
+- o fluxo basico de emprestimos ja funciona com dados de exemplo
 
 ### Pessoa 5 - Revisao, padronizacao, POO e apresentacao
 
@@ -367,14 +380,19 @@ Para que o grupo trabalhe com compatibilidade, o `Main.java` ja define os nomes 
 
 Esses nomes devem ser mantidos para evitar erro de integracao entre o menu e os modulos.
 
-## 13. Arquivos previstos para as proximas etapas
+## 13. Situacao dos arquivos principais
 
-Nas proximas fases do projeto, ainda deverao ser criados ou finalizados:
+Os principais arquivos do sistema ja estao presentes:
 
 - `Livro.java`
 - `LivroController.java`
+- `Leitor.java`
+- `LeitorController.java`
+- `Emprestimo.java`
+- `EmprestimoController.java`
+- `Main.java`
 
-Os arquivos `Leitor.java`, `LeitorController.java`, `Emprestimo.java` e `EmprestimoController.java` ja existem, mas podem receber ajustes de integracao final caso o grupo combine.
+Ainda podem ocorrer ajustes de integracao final, principalmente para fazer o modulo de Emprestimo usar diretamente os livros e leitores cadastrados pelos outros modulos.
 
 ## 14. O que cada modulo deve representar
 

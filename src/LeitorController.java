@@ -6,7 +6,15 @@ import java.util.Scanner;
 public class LeitorController {
 
     private ArrayList<Leitor> leitores = new ArrayList<>();
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
+
+    public LeitorController() {
+        this.scanner = new Scanner(System.in);
+    }
+
+    public LeitorController(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     // CADASTRAR LEITOR
     public void cadastrarLeitor() {
