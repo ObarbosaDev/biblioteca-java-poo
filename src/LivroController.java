@@ -16,6 +16,12 @@ public class LivroController {
     public void cadastrarLivro(){
         System.out.print("Digite o titulo do livro: ");
         String titulo=lerTextoObrigatorio("Titulo invalido. Digite o titulo do livro: ");
+
+        if(buscarLivroPorTitulo(titulo) != null){
+            System.out.println("Livro ja cadastrado.");
+            return;
+        }
+
         Livro livro=new Livro(titulo);
         livros.add(livro);
         System.out.println("Livro cadastrado com sucesso!");
@@ -62,12 +68,26 @@ public class LivroController {
         String titulo=lerTextoObrigatorio("Titulo invalido. Digite o titulo: ");
         for(Livro l:livros){
             if(l.getTitulo().equalsIgnoreCase(titulo)){
+                if(!l.isDisponivel()){
+                    System.out.println("Nao e possivel excluir um livro emprestado.");
+                    return;
+                }
+
                 livros.remove(l);
                 System.out.println("Livro excluido.");
                 return;
             }
         }
         System.out.println("Livro nao encontrado.");
+    }
+
+    public Livro buscarLivroPorTitulo(String titulo){
+        for(Livro l:livros){
+            if(l.getTitulo().equalsIgnoreCase(titulo)){
+                return l;
+            }
+        }
+        return null;
     }
 
     private String lerTextoObrigatorio(String mensagemErro){

@@ -163,7 +163,7 @@ Esse arquivo já foi integrado ao projeto e contém:
 
 Controla as chamadas do menu de empréstimos.
 
-No momento, ele usa dados simples de exemplo para permitir que o fluxo funcione enquanto a integração completa entre livros, leitores e empréstimos ainda não é feita.
+Ele usa os livros e leitores cadastrados no sistema para registrar empréstimos.
 
 ### `src/Livro.java`
 
@@ -303,7 +303,7 @@ Status atual:
 - a classe `Emprestimo` já foi adicionada;
 - o `EmprestimoController` já foi separado;
 - o fluxo do menu de empréstimos já chama esse controller;
-- o fluxo básico de empréstimos já funciona com dados de exemplo.
+- o fluxo de empréstimos já utiliza livros e leitores cadastrados.
 
 ### Pessoa 5 - Revisão, padronização, POO e apresentação
 
@@ -392,7 +392,7 @@ Os principais arquivos do sistema já estão presentes:
 - `EmprestimoController.java`;
 - `Main.java`.
 
-Ainda podem ocorrer ajustes de integração final, principalmente para fazer o módulo de empréstimo usar diretamente os livros e leitores cadastrados pelos outros módulos.
+Ainda podem ocorrer ajustes finais de apresentação e padronização, mas os principais arquivos do sistema já estão integrados.
 
 ## 14. O que cada módulo representa
 

@@ -22,6 +22,12 @@ public class LeitorController {
         System.out.print("Digite o ID do leitor: ");
         int id = lerId();
 
+        if(buscarLeitorPorId(id) != null) {
+
+            System.out.println("ID ja cadastrado para outro leitor.");
+            return;
+        }
+
         System.out.print("Digite o nome do leitor: ");
         String nome = lerTextoObrigatorio("Nome invalido. Digite o nome do leitor: ");
 
@@ -113,6 +119,19 @@ public class LeitorController {
         }
 
         System.out.println("Leitor nao encontrado.");
+    }
+
+    public Leitor buscarLeitorPorId(int id) {
+
+        for(Leitor leitor : leitores) {
+
+            if(leitor.getId() == id) {
+
+                return leitor;
+            }
+        }
+
+        return null;
     }
 
     private int lerId() {

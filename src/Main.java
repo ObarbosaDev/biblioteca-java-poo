@@ -15,7 +15,7 @@ public class Main { // Classe principal.
         scanner = new Scanner(System.in); // Cria o Scanner.
         livroController = new LivroController(scanner); // Cria o controller de livros.
         leitorController = new LeitorController(scanner); // Cria o controller de leitores.
-        emprestimoController = new EmprestimoController(); // Cria o controller de emprestimos.
+        emprestimoController = new EmprestimoController(scanner, livroController, leitorController); // Cria o controller de emprestimos.
 
         int opcao; // Guarda a opcao do menu.
 
